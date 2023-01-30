@@ -6,7 +6,11 @@ Rank and prioritize AD targets based on genetic and Genomic Evidence
 
 All code is stored in ```code/```
 
-The scripts to compile and compute the genetics score are stored under ```code/genetics_score/``` and the scripts to compute the multi-omics score are stored under ```code/multi-omics_score/```. Once these two scores have been computed, the overall Target Risk Score can be computed with ```code/compute_target_risk_score.R```
+The scripts to compile and compute the genetics score are stored under ```code/genetics_score/``` and the scripts to compute the multi-omics score are stored under ```code/multi-omics_score/```. Once these two scores have been computed, the overall Target Risk Score can be computed with ```code/compute_target_risk_score.R```.
+
+##Biological domain scripts:
+
+The ```annotate_biodomains.R``` script is used to download from BioMart the gene identifiers specific to each biological domain term. There are two scripts to calculate and process biological domain GO term enrichments: (1) ```biodom_GSEA.R``` is a wrapper around ```clusterProfiler::gseGO``` that will annotate the resulting enrichments with biological domain information, (2) ```tally_significantly_enriched_biodomains.R``` is used to generate a high-level summary of the terms enriched within each biological domain. 
 
 ##To run the genetics pipeline:
 
